@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHIPIBO Bistró Amazónico | Gastronomía Vegana de Autor</title>
+    <meta name="description" content="Templo nocturno amazónico. Gastronomía vegana de autor con sabores ancestrales. Suipacha 427, Ramos Mejía.">
+    <meta name="theme-color" content="#0A0A0A">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header" id="header">
+        <div class="header__inner">
+            <a href="#" class="header__logo" aria-label="SHIPIBO - Inicio">
+                <svg class="header__snake" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M20 4C12 4 8 10 8 16C8 22 12 24 14 28C16 32 14 36 20 36C26 36 32 30 32 22C32 16 28 14 26 10C24 6 28 4 20 4Z" stroke="currentColor" stroke-width="1.2" fill="none"/>
+                    <circle cx="15" cy="12" r="1.2" fill="currentColor"/>
+                    <path d="M20 36L18 39M20 36L22 39" stroke="currentColor" stroke-width="0.8"/>
+                    <path d="M10 8C12 6 14 8 12 10" stroke="currentColor" stroke-width="0.8" fill="none"/>
+                </svg>
+                <span class="header__name">SHIPIBO</span>
+            </a>
+            <nav class="header__nav" id="mainNav" aria-label="Navegación principal">
+                <a href="#menu" class="header__link">Menú</a>
+                <a href="#galeria" class="header__link">Galería</a>
+                <a href="#historia" class="header__link">Historia</a>
+                <a href="#contacto" class="header__link">Reservar</a>
+            </nav>
+            <a href="https://wa.me/5491165384415?text=Hola!%20Quiero%20hacer%20una%20reserva%20en%20SHIPIBO" class="header__cta" target="_blank" rel="noopener">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Reservá
+            </a>
+            <button class="header__hamburger" id="hamburgerBtn" aria-label="Abrir menú" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <!-- Mobile nav -->
+        <nav class="header__mobile-nav" id="mobileNav" aria-label="Navegación móvil">
+            <a href="#menu" class="header__mobile-link">Menú</a>
+            <a href="#galeria" class="header__mobile-link">Galería</a>
+            <a href="#historia" class="header__mobile-link">Historia</a>
+            <a href="#contacto" class="header__mobile-link">Reservar</a>
+            <a href="https://wa.me/5491165384415?text=Hola!%20Quiero%20reservar%20en%20SHIPIBO" class="header__mobile-cta" target="_blank" rel="noopener">Reservá por WhatsApp</a>
+        </nav>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+        <div class="hero__bg">
+            <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmnR2W5txJ7Y40K02M-C_OoHqUSQLEeB1TZMbZi5mlO0m2MYGCQoxfMaFSkLYruLugSA9LR5jWjdca3hgWtXleugzevBYJGPtWvXiI1lZ4OvZrjvieTsNuyUTmZccVwTcqt4AYTrQ=s1360-w1360-h1020-rw" alt="SHIPIBO Bistró Amazónico - Exterior" class="hero__img" loading="eager">
+        </div>
+        <div class="hero__overlay"></div>
+        <div class="hero__pattern" aria-hidden="true"></div>
+        <div class="hero__content">
+            <p class="hero__tagline anim-fade">Bistró Amazónico · Ramos Mejía</p>
+            <h1 class="hero__title anim-fade">La selva<br>tiene hambre.</h1>
+            <p class="hero__subtitle anim-fade">Gastronomía vegana de autor inspirada en los sabores ancestrales amazónicos. Un templo nocturno donde lo ancestral se encuentra con lo contemporáneo.</p>
+            <div class="hero__actions anim-fade">
+                <a href="#menu" class="btn btn--primary">Explorar el menú</a>
+                <a href="https://wa.me/5491165384415?text=Hola!%20Quiero%20hacer%20una%20reserva%20en%20SHIPIBO" class="btn btn--outline" target="_blank" rel="noopener">Reservá tu mesa</a>
+            </div>
+            <div class="hero__rating anim-fade">
+                <span class="hero__stars">★★★★★</span>
+                <span class="hero__score">4.8</span>
+                <span class="hero__reviews">4.635 reseñas en Google</span>
+            </div>
+        </div>
+        <div class="hero__scroll" aria-hidden="true">
+            <span>Scroll</span>
+            <div class="hero__scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- ===== DIFERENCIALES ===== -->
+    <section class="diff" id="diferenciales">
+        <div class="container">
+            <p class="section-label anim-reveal">Lo que nos define</p>
+            <h2 class="section-title anim-reveal">Tres pilares, <em>una experiencia</em></h2>
+            <div class="diff__grid">
+                <div class="diff__card anim-reveal">
+                    <div class="diff__icon">
+                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M24 4C13 4 8 14 8 22C8 30 14 34 18 40C20 43 24 44 24 44C24 44 28 43 30 40C34 34 40 30 40 22C40 14 35 4 24 4Z"/>
+                            <path d="M18 22C18 18 21 14 24 14C27 14 30 18 30 22" stroke-dasharray="2 2"/>
+                            <circle cx="24" cy="24" r="3"/>
+                        </svg>
+                    </div>
+                    <h3 class="diff__title">Sabores Ancestrales</h3>
+                    <p class="diff__text">Cada plato es un viaje a la Amazonía peruana. Ingredientes como la yuba, los hongos shitake y las especias amazónicas se transforman en una cocina de autor que honra lo ancestral sin renunciar a lo contemporáneo.</p>
+                </div>
+                <div class="diff__card anim-reveal">
+                    <div class="diff__icon">
+                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="24" cy="24" r="18"/>
+                            <path d="M24 6V24L36 30"/>
+                            <path d="M12 12L24 24M36 12L24 24" stroke-dasharray="2 2"/>
+                            <circle cx="24" cy="24" r="4"/>
+                        </svg>
+                    </div>
+                    <h3 class="diff__title">Experiencia Nocturna</h3>
+                    <p class="diff__text">Un mural botánico pintado a mano, luces cálidas colgantes y un ambiente que se siente como un lugar secreto. No solo venís a comer: venís a sentir. Cada detalle construye una atmósfera que no existe en otro lado.</p>
+                </div>
+                <div class="diff__card anim-reveal">
+                    <div class="diff__icon">
+                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M8 36C8 36 12 28 24 28C36 28 40 36 40 36"/>
+                            <path d="M14 28C14 20 18 12 24 12C30 12 34 20 34 28"/>
+                            <path d="M20 12C20 8 22 4 24 4C26 4 28 8 28 12"/>
+                            <path d="M18 36L16 44M30 36L32 44"/>
+                            <line x1="12" y1="44" x2="36" y2="44"/>
+                        </svg>
+                    </div>
+                    <h3 class="diff__title">100% Vegano, 100% Sabor</h3>
+                    <p class="diff__text">Todo es hecho en casa: desde la mozzarella de girasol hasta el jamón de proteína de trigo. Sin atajos, sin sabores artificiales. La parrillada, los raviolones, las milanesas… todo tiene alma propia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== STAR DISH ===== -->
+    <section class="star" id="estrella">
+        <div class="star__bg">
+            <img src="https://pub-4928cf8453ba4ee7b1b4abb290eed69c.r2.dev/shipibo-bistro-amazonico/images/1.jpg" alt="Parrillada Amazónica de SHIPIBO" class="star__img" loading="lazy">
+        </div>
+        <div class="star__overlay"></div>
+        <div class="container star__content">
+            <div class="star__badge anim-reveal">Especialidad de la casa</div>
+            <h2 class="star__title anim-reveal">La Parrillada<br><span class="star__title--accent">Amazónica</span></h2>
+            <p class="star__desc anim-reveal">Nuestra obra maestra. Una parrillada vegana completa con mollejas de girgolas maceradas, nuggets ahumados de yuba, salchicha parrillera casera, chorizos de proteína vegetal y lomo de carne vegetal. Acompañada con guarnición a elección.</p>
+            <div class="star__price anim-reveal">
+                <span class="star__price-amount">$46.640</span>
+                <span class="star__price-note">con guarnición incluida</span>
+            </div>
+            <a href="https://wa.me/5491165384415?text=Hola!%20Quiero%20reservar%20la%20Parrillada%20Amaz%C3%B3nica%20%F0%9F%90%8D" class="btn btn--primary anim-reveal" target="_blank" rel="noopener">Pedila por WhatsApp</a>
+        </div>
+    </section>
+
+    <!-- ===== MENU ===== -->
+    <section class="menu" id="menu">
+        <div class="container">
+            <p class="section-label anim-reveal">Nuestro menú</p>
+            <h2 class="section-title anim-reveal">Elegí tu <em>camino</em></h2>
+            <p class="section-subtitle anim-reveal">Todo hecho en casa, todo vegano, todo con propósito. Navegá por categorías o pedí el menú completo por WhatsApp.</p>
+
+            <div class="menu__tabs anim-reveal" role="tablist">
+                <button class="menu__tab active" data-tab="tapeos" role="tab" aria-selected="true">Tapeos</button>
+                <button class="menu__tab" data-tab="principales" role="tab" aria-selected="false">Principales</button>
+                <button class="menu__tab" data-tab="pastas" role="tab" aria-selected="false">Pastas</button>
+                <button class="menu__tab" data-tab="pizzas" role="tab" aria-selected="false">Pizzas</button>
+                <button class="menu__tab" data-tab="hamburguesas" role="tab" aria-selected="false">Hamburguesas</button>
+                <button class="menu__tab" data-tab="postres" role="tab" aria-selected="false">Postres</button>
+                <button class="menu__tab" data-tab="bebidas" role="tab" aria-selected="false">Bebidas</button>
+            </div>
+
+            <!-- TAPEOS -->
+            <div class="menu__panel active" id="panel-tapeos" role="tabpanel">
+                <div class="menu__grid">
+                    <div class="menu__item">
+                        <div class="menu__item-header">
+                            <h4 class="menu__item-name">Nuggets de Yuba</h4>
+                            <span class="menu__item-price">$15.840</span>
+                        </div>
+                        <p class="menu__item-desc">Porciones de yuba empanadas, crujientes por fuera, tiernas por dentro. Dip de barbacoa casera y gajos de limón.</p>
+                    </div>
+                    <div class="menu__item">
+                        <div class="menu__item-header">
+                            <h4 class="menu__item-name">Empanadas ×3</h4>
+                            <span class="menu__item-price">$15.840</span>
+                        </div>
+                        <p class="menu__item-desc">Empanadas XL: una de hongos, provoleta y verdeo; una de carne y lomo; una de jamón y queso. Todo vegano, todo casero.</p>
+                    </div>
+                    <div class="menu__item">
+                        <div class="menu__item-header">
+                            <h4 class="menu__item-name">Coliflor Asado</h4>
+                            <span class="menu__item-price">$14.740</span>
+                        </div>
+                        <p class="menu__item-desc">Coliflor asada con emulsión de zanahorias, almendras y lentejas. Un tapeo que sorprende.</p>
+                    </div>
+                    <div class="menu__item">
+                        <div class="menu__item-header">
+                            <h4 class="menu__item-name">Falafel Tapeo</h4>
+                            <span class="menu__item-price">$14.740</span>
+                        </div>
+                        <p class="menu__item-desc">Croquetas de garbanzos con vegetales, aromáticas y aceite de oliva. Acompañado de hummus cremoso.</p>
+                    </div>
+                    <div class="menu__item">
+                        <div class="menu__item-header">
+                            <h4 class="menu__item-name">Papas Full</h4>
+                            <span class="menu__item-price">$17.490</span>
+                        </div>
+                        <p class="menu__item-desc">Papas al horno con cheddar casero de girasol, salchichas y cebolla de verdeo. Indulgencia total.</p>
+                    </div>
+                    <div class="menu__item">
+                        <div class="menu__item-header">
+                            <h4 class="menu__item-name">Puré de Berenjenas Ahumadas</h4>
+                            <span class="menu__item-price">$10.120</span>
+                        </div>
+                        <p class="menu__item-desc">Dip cremoso de berenjena ahumada con pan tostado. Simple, elegante, adictivo.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRINCIPALES -->
+            <div class="menu__panel" id="panel-principales" role="tabpanel">
+                <div class="menu__grid">
+                    <div class="menu__item menu__item--featured">
+                        <div class="menu__item-badge">Recomendado</div>
+                        <div class="menu__item-header">
+                            <h4 class="menu__item-name">Mila de Berenjena Estrellada</h4>
+                            <span class="menu__item-price">$20.790</span>
+                        </div>
+                        <p class="menu__item-desc">Berenjena ahumada y estrellada, empanada con blend de dos panes sobre salsa fileto y pincelada de pesto de albahaca. La que todos recomiendan.</p>
+                    </div>
+                    <div class="menu__item">
+                        <div class="menu__item-header">
+                            <h4 class="menu__item-name">Lomo de Seitán Ahumado</h4>
+                            <span class="menu__item-price">$21.780</span>
+                        </div>
+                        <p class="menu__item-desc">Lomo de seitán ahumado al plato con salsa barbacoa casera + guarnición a elección.</p>
+                    </div>
+                    <div class="menu__item">
+                        <div class="menu__item-header">
+                            <h4 class="menu__item-name">Burrito Carne de Seitán</h4>
+                            <span class="menu__item-price">$21.780</span>
+                        </div>
+                        <p class="menu__item-desc">Tortilla de maíz sellada a la plancha con vegetales de estación salteados, carne de seitán especiada y masala ahumado + guarnición.</p>
+                    </div>
+                    <div class="menu__item">
+                        <div class="menu__item-header">
+                            <h4 class="menu__item-name">Wok Yuba</h4>
+                            <span class="menu__item-price">$20.790</span>
+                        </div>
+                        <p class="menu__item-desc">Fideos de arroz salteados con salsa de soja, vegetales de estación, yuba, crocante de maní y tostadas.</p>
+                    </div>
+                    <div class="menu__item">
+                        <div class="menu__item-header">
+                            <h4 class="menu__item-name">Shawarma de Hongos</h4>
+                            <span class="menu__item-price">$22.440</span>
+                        </div>
+                        <p class="menu__item-desc">Shawarma de hongos shitakés y gírgolas, coleslaw, aros de cebolla, tomate y salsa de yogurt. Envuelto en tortilla de trigo.</p>
+                    </div>
+                    <div class="menu__item">
+                        <div class="menu__item-header">
+                            <h4 class="menu__item-name">Lomo a la Pizza al Plato</h4>
+                            <span class="menu__item-price">$22.440</span>
+                        </div>
+                        <p class="menu__item-desc">Lomo de seitán ahumado a la pizza con mozzarella vegetal, salsa fileto y morrón asado + guarnición.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PASTAS -->
+            <div class="menu__panel" id="panel-pastas" role="tabpanel">
+                <div class="menu__grid">
+                    <div class="menu__item menu__item--featured">
+                        <div class="menu__item-badge">Clásico</div>
+                        <div class="menu__item-header">
+                            <h4 class="menu__item-name">Raviolones Amarillos</h4>
+                            <span class="menu__item-price">$18.590</span>
+                        </div>
+                        <p class="menu__item-desc">Relleno de calabaza horneada y sofrito de cebolla caramelizada con verdeo. La pasta que enamora.</p>
+                    </div>
+                    <div class="menu__item">
+                        <div class="menu__item-header">
+                            <h4 class="menu__item-name">Raviolones Negros</h4>
+                            <span class="menu__item-price">$20.790</span>
+                        </div>
+                        <p class="menu__item-desc">Hongos shitakés y gírgolas a la barbacoa con cebolla caramelizada y verdeo. Con salsa fileto.</p>
+                    </div>
+                    <div class="menu__item">
+                        <div class="menu__item-header">
+                            <h4 class="menu__item-name">Sorrentinos Blancos</h4>
+                            <span class="menu__item-price">$18.590</span>
+                        </div>
+                        <p class="menu__item-desc">Relleno de queso fu y jamón casero a base de proteína de trigo y tofu. Clásico reinventado.</p>
+                    </div>
+                    <div class="menu__item">
+                        <div class="menu__item-header">
+                            <h4 class="menu__item-name">Ñoquis de Papa</h4>
+                            <span class="menu__item-price">$17.490</span>
+                        </div>
+                        <p class="menu__item-desc">Ñoquis de papa caseros con salsa fileto o bolognesa + pan. Tradición con conciencia.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PIZZAS -->
+            <div class="menu__panel" id="panel-pizzas" role="tabpanel">
+                <div class="menu__grid">
+                    <div class="menu__item menu__item--featured">
+                        <div class="menu__item-badge">De autor</div>
+                        <div class="menu__item-header">
+                            <h4 class="menu__item-name">Pizza De La Jungla</h4>
+                            <span class="menu__item-price">$32.890</span>
+                        </div>
+                        <p class="menu__item-desc">Salsa fileto, mozzarella casera de girasol, rúcula, tomates asados y aceitunas. La que lleva el nombre.</p>
+                    </div>
+                    <div class="menu__item">
+                        <div class="menu__item-header">
+                            <h4 class="menu__item-name">Pizza con Hongos</h4>
+                            <span class="menu__item-price">$32.890</span>
+                        </div>
+                        <p class="menu__item-desc">Salsa fileto, mozzarella de girasol, mix de hongos shitakés y gírgolas, aceitunas negras.</p>
+                    </div>
+                    <div class="menu__item">
+                        <div class="menu__item-header">
+                            <h4 class="menu__item-name">Pizza Margarita</h4>
+                            <span class="menu__item-price">$25.190</span>
+                        </div>
+                        <p class="menu__item-desc">Salsa fileto, mozzarella de girasol, pesto de albahaca y aceitunas negras. La más accesible, la más honesta.</p>
+                    </div>
+                    <div class="menu__item">
+                        <div class="menu__item-header">
+                            <h4 class="menu__item-name">Pizza de Yuba</h4>
+                            <span class="menu__item-price">$32.890</span>
+                        </div>
+                        <p class="menu__item-desc">Salsa fileto, mozzarella de girasol, yuba desmenuzada y aceitunas. Proteína vegetal en cada mordisco.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- HAMBURGUESAS -->
+            <div class="menu__panel" id="panel-hamburguesas" role="tabpanel">
+                <div class="menu__grid">
+                    <div class="menu__item">
+                        <div class="menu__item-header">
+                            <h4 class="menu__item-name">Hamburguesa Iskon</h4>
+                            <span class="menu__item-price">$19.690</span>
+                        </div>
+                        <p class="menu__item-desc">Medallón de soja ahumada en pan briosh, cheddar casero de girasol, cebollas caramelizadas, pickles de pepino y ketchup + guarnición.</p>
+                    </div>
+                    <div class="menu__item menu__item--featured">
+                        <div class="menu__item-badge">Imprescindible</div>
+                        <div class="menu__item-header">
+                            <h4 class="menu__item-name">Hamburguesa Jamata</h4>
+                            <span class="menu__item-price">$22.440</span>
+                        </div>
+                        <p class="menu__item-desc">Hamburguesa de tofu macerado, rúcula, cherries confitados, brotes y mayonesa de tomates secos. En pan de carbón activado. Una obra.</p>
+                    </div>
+                    <div class="menu__item">
+                        <div class="menu__item-header">
+                            <h4 class="menu__item-name">Súper Pancho + Guarnición</h4>
+                            <span class="menu__item-price">$16.940</span>
+                        </div>
+                        <p class="menu__item-desc">Pan de viena, salchicha XL de proteína de trigo y tofu, huevo feliz (tofu revuelto), salsa mil islas y chips de vegetales.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- POSTRES -->
+            <div class="menu__panel" id="panel-postres" role="tabpanel">
+                <div class="menu__grid">
+                    <div class="menu__item menu__item--featured">
+                        <div class="menu__item-badge">Famosa</div>
+                        <div class="menu__item-header">
+                            <h4 class="menu__item-name">Torta Matilda</h4>
+                            <span class="menu__item-price">$15.290</span>
+                        </div>
+                        <p class="menu__item-desc">Bizcochuelo de chocolate relleno de ganache de chocolate semi amargo, cubierto con crema de chocolate. La que no podés dejar de pedir.</p>
+                    </div>
+                    <div class="menu__item menu__item--featured">
+                        <div class="menu__item-badge">Famosa</div>
+                        <div class="menu__item-header">
+                            <h4 class="menu__item-name">Torta Verde Flora</h4>
+                            <span class="menu__item-price">$15.290</span>
+                        </div>
+                        <p class="menu__item-desc">Bizcochuelo de naranja y pistachos, relleno de crema de pistachos, cubierto con glasé de limón. Fresca, única, inolvidable.</p>
+                    </div>
+                    <div class="menu__item">
+                        <div class="menu__item-header">
+                            <h4 class="menu__item-name">Volcán de Chocolate</h4>
+                            <span class="menu__item-price">$14.190</span>
+                        </div>
+                        <p class="menu__item-desc">Volcán de chocolate relleno de ganache, montado sobre salsa de frutillas casera. Elegancia en cada cucharada.</p>
+                    </div>
+                    <div class="menu__item">
+                        <div class="menu__item-header">
+                            <h4 class="menu__item-name">Cheesecake de Pistachos</h4>
+                            <span class="menu__item-price">$15.290</span>
+                        </div>
+                        <p class="menu__item-desc">Base de galletas de naranja sin gluten, tofu, coco y pasta de pistachos. Acabado con baño de chocolate.</p>
+                    </div>
+                    <div class="menu__item">
+                        <div class="menu__item-header">
+                            <h4 class="menu__item-name">Lemon Pie</h4>
+                            <span class="menu__item-price">$15.290</span>
+                        </div>
+                        <p class="menu__item-desc">Masa sablée, curd de limón casero, crema y ralladura de limón. Cítrico, balanceado, perfecto.</p>
+                    </div>
+                    <div class="menu__item">
+                        <div class="menu__item-header">
+                            <h4 class="menu__item-name">Brownie Frutal</h4>
+                            <span class="menu__item-price">$14.190</span>
+                        </div>
+                        <p class="menu__item-desc">Brownie de chocolate y almendras sobre colchón de salsa de frutillas casera y caramelo mascabo.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BEBIDAS -->
+            <div class="menu__panel" id="panel-bebidas" role="tabpanel">
+                <div class="menu__grid">
+                    <div class="menu__item">
+                        <div class="menu__item-header">
+                            <h4 class="menu__item-name">Imperial IPA 473ml</h4>
+                            <span class="menu__item-price">$5.600</span>
+                        </div>
+                        <p class="menu__item-desc">IPA con notas cítricas y florales. Para los que buscan intensidad.</p>
+                    </div>
+                    <div class="menu__item">
+                        <div class="menu__item-header">
+                            <h4 class="menu__item-name">Imperial APA 473ml</h4>
+                            <span class="menu__item-price">$6.400</span>
+                        </div>
+                        <p class="menu__item-desc">APA balanceada, amarga pero accesible. Compañera perfecta para los platos principales.</p>
+                    </div>
+                    <div class="menu__item">
+                        <div class="menu__item-header">
+                            <h4 class="menu__item-name">Heineken 473ml</h4>
+                            <span class="menu__item-price">$5.800</span>
+                        </div>
+                        <p class="menu__item-desc">Lager premium. La clásica que nunca falla.</p>
+                    </div>
+                    <div class="menu__item">
+                        <div class="menu__item-header">
+                            <h4 class="menu__item-name">Amstel Lager 473ml</h4>
+                            <span class="menu__item-price">$7.500</span>
+                        </div>
+                        <p class="menu__item-desc">Lager suave y refrescante. Para acompañar sin dominar.</p>
+                    </div>
+                    <div class="menu__item">
+                        <div class="menu__item-header">
+                            <h4 class="menu__item-name">Coca Cola Zero 354ml</h4>
+                            <span class="menu__item-price">$5.400</span>
+                        </div>
+                        <p class="menu__item-desc">Sin azúcar. La de siempre.</p>
+                    </div>
+                    <div class="menu__item">
+                        <div class="menu__item-header">
+                            <h4 class="menu__item-name">Pepsi 354ml</h4>
+                            <span class="menu__item-price">$5.400</span>
+                        </div>
+                        <p class="menu__item-desc">Lata Pepsi. Para los que eligen otro lado.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu__cta anim-reveal">
+                <p>¿No encontrás lo que buscás? Tenemos más de 80 preparaciones.</p>
+                <a href="https://wa.me/5491165384415?text=Hola!%20Quiero%20ver%20el%20men%C3%BA%20completo%20de%20SHIPIBO" class="btn btn--primary" target="_blank" rel="noopener">Pedí el menú completo por WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== GALERÍA ===== -->
+    <section class="gallery" id="galeria">
+        <div class="container">
+            <p class="section-label anim-reveal">El lugar</p>
+            <h2 class="section-title anim-reveal">Un refugio <em>escondido</em></h2>
+        </div>
+        <div class="gallery__grid">
+            <div class="gallery__item gallery__item--tall anim-reveal">
+                <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmnR2W5txJ7Y40K02M-C_OoHqUSQLEeB1TZMbZi5mlO0m2MYGCQoxfMaFSkLYruLugSA9LR5jWjdca3hgWtXleugzevBYJGPtWvXiI1lZ4OvZrjvieTsNuyUTmZccVwTcqt4AYTrQ=s1360-w1360-h1020-rw" alt="Exterior de SHIPIBO Bistró Amazónico" loading="lazy">
+            </div>
+            <div class="gallery__item anim-reveal">
+                <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkCKfYiml1xk5C2SRBK-6HLpzokEmStIkg8St4HtZqG3J0dtQaCNTHUqzhdP5W3SngCZoh4TrSoUtbGeyKlI3aFxZDdLLjIeNOXEWQfi-HLNVsJqoRxjARVwi_W_E2KNZoNvklBXQ=s1360-w1360-h1020-rw" alt="Fachada de SHIPIBO" loading="lazy">
+            </div>
+            <div class="gallery__item anim-reveal">
+                <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmG_XICetbfV6oqi7MXsTK0d7gy5jyNsl6_y0QsEk66vP27_P4lFRzFyOCkIYulL5Ni0Rdm-ByitTjez8B6B3w9UfoHwrbCNcuE98DeZjAbJ9g1BzpiOulqSt4DCUMLnIpDdnblTqJ1eSE-=s1360-w1360-h1020-rw" alt="Interior de SHIPIBO" loading="lazy">
+            </div>
+            <div class="gallery__item gallery__item--tall anim-reveal">
+                <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkqbZpJ5VzLKU9mwfvQyjzJ47I8xbs4jTEdStHKtqxT8uwXI-K5E96dhxBCqqyGbfWVeFw-QLbq84BWKWfsaRMzpD6zeAvoXg6NcDs9WjxvsjGToWQZLZmNVNPuTvoBLAnPXcC8HJDg1qo=s1360-w1360-h1020-rw" alt="Ambiente nocturno de SHIPIBO" loading="lazy">
+            </div>
+            <div class="gallery__item anim-reveal">
+                <img src="https://pub-4928cf8453ba4ee7b1b4abb290eed69c.r2.dev/shipibo-bistro-amazonico/images/1.jpg" alt="Detalle del local SHIPIBO" loading="lazy">
+            </div>
+            <div class="gallery__item anim-reveal">
+                <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmxsMRlPOv6l3VYN7rowKXMsb4Y5J927yQuZEeTC1BF80ZvjM6gwlPO2xWBFENa9KCm574_1cdFQamrefrxjk6IS8mS8tAKUrhc69lcTz3u0n_MrvcfKjwgQe2B8EuUlmdoUC9xmxZ7Iiw=s1360-w1360-h1020-rw" alt="Plato de SHIPIBO" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MOMENTOS ===== -->
+    <section class="moments" id="momentos">
+        <div class="container">
+            <p class="section-label anim-reveal">Elegí tu momento</p>
+            <h2 class="section-title anim-reveal">Siempre hay una razón <em>para venir</em></h2>
+            <div class="moments__grid">
+                <div class="moments__card anim-reveal">
+                    <div class="moments__image">
+                        <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWk7mgRqLQCML2QPZv4fUTnesEfqDkLFIiPLs6oBw-Jpqh5Tf3S-SfJy6nQTYeNQDtcY3mjm9LDuz68iM_uDQiY60UMuv8tRoeYwbcqkGMLVLzcZysga7xwPOirvFJUoj138tdpk=s1360-w1360-h1020-rw" alt="Brunch en SHIPIBO" loading="lazy">
+                    </div>
+                    <div class="moments__info">
+                        <span class="moments__time">Lun - Dom · 11:00 a 14:00</span>
+                        <h3 class="moments__name">El Brunch Amazónico</h3>
+                        <p class="moments__desc">Medialunas, paninis, tostados de miga y tortas artesanales. El café de la mañana con vista a la selva pintada.</p>
+                    </div>
+                </div>
+                <div class="moments__card anim-reveal">
+                    <div class="moments__image">
+                        <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkIZoA1cyKpIlobuuMeY1A6SBqhDen_RKyt7M7OxbHXtE1DBt1u0sktnU69zDxH30FMeVLqS_k9lf5fOXc-lt_sHxZ-p04KIeDdhKl39SzUrWG9oD4bGFazP4K7fzkihgdm6iIA3u3GVGDN=s1360-w1360-h1020-rw" alt="Almuerzo en SHIPIBO" loading="lazy">
+                    </div>
+                    <div class="moments__info">
+                        <span class="moments__time">Mar - Dom · 12:00 a 15:30</span>
+                        <h3 class="moments__name">La Mesa del Mediodía</h3>
+                        <p class="moments__desc">Woks, burritos, milanesas y las pastas que ya son leyenda. Vení con hambre, salí con una historia para contar.</p>
+                    </div>
+                </div>
+                <div class="moments__card anim-reveal">
+                    <div class="moments__image">
+                        <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkqnaLIsm-viNVpKTSJNJbWH44EyjCozPIwwWOkNqEZJdwdgKVbAw3WneLUwrUqlxx727KhV63yUJMx8vgCpAcdlaNeyjYUZC8iH4e0E-umktWrTk8JpTK9cseuofgOLJZQccLSaBKHtU3i=s1360-w1360-h1020-rw" alt="Noche en SHIPIBO" loading="lazy">
+                    </div>
+                    <div class="moments__info">
+                        <span class="moments__time">Mar - Dom · 20:00 a 01:00</span>
+                        <h3 class="moments__name">La Noche Ritual</h3>
+                        <p class="moments__desc">Pizzas, parrillada, coctelería y la luz dorada que transforma todo. El momento en que SHIPIBO se convierte en templo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TESTIMONIOS ===== -->
+    <section class="testimonials" id="testimonios">
+        <div class="container">
+            <p class="section-label anim-reveal">Lo que dicen</p>
+            <h2 class="section-title anim-reveal">Palabras que <em>no pedimos</em></h2>
+            <div class="testimonials__rating anim-reveal">
+                <span class="testimonials__rating-score">4.8</span>
+                <div class="testimonials__rating-stars">★★★★★</div>
+                <span class="testimonials__rating-text">Basado en 4.635 reseñas de Google</span>
+            </div>
+            <div class="testimonials__grid">
+                <div class="testimonials__card anim-reveal">
+                    <div class="testimonials__header">
+                        <div class="testimonials__avatar">MG</div>
+                        <div>
+                            <h4 class="testimonials__name">María G.</h4>
+                            <span class="testimonials__date">hace 2 semanas</span>
+                        </div>
+                        <div class="testimonials__stars">★★★★★</div>
+                    </div>
+                    <p class="testimonials__text">"Elegimos el lugar para festejar nuestro aniversario y no nos defraudó. Comimos riquísimo y fuimos bien atendidos por Guillermo, quien nos explicó con mucha paciencia todos los ingredientes. Los raviolones exquisitos. Todo con mucho sabor, muchas texturas. Volveremos."</p>
+                </div>
+                <div class="testimonials__card anim-reveal">
+                    <div class="testimonials__header">
+                        <div class="testimonials__avatar">LR</div>
+                        <div>
+                            <h4 class="testimonials__name">Lucas R.</h4>
+                            <span class="testimonials__date">hace 1 mes</span>
+                        </div>
+                        <div class="testimonials__stars">★★★★★</div>
+                    </div>
+                    <p class="testimonials__text">"Si realmente queres pasarla bien, comer rico, probar sabores realmente únicos… tenés que venir. Es una experiencia increíble. Guille nos atendió, una masa. Muy lindo lugar, bien ambientado y cómodo. 10/10."</p>
+                </div>
+                <div class="testimonials__card anim-reveal">
+                    <div class="testimonials__header">
+                        <div class="testimonials__avatar">CA</div>
+                        <div>
+                            <h4 class="testimonials__name">Carolina A.</h4>
+                            <span class="testimonials__date">hace 3 semanas</span>
+                        </div>
+                        <div class="testimonials__stars">★★★★★</div>
+                    </div>
+                    <p class="testimonials__text">"El mejor lugar para veggies del oeste. La comida es espectacular. El lugar es muy cálido y el personal también. Nos atendió Guille, que es un genio. Mi recomendación: los raviolones de calabaza. Exquisitos."</p>
+                </div>
+                <div class="testimonials__card anim-reveal">
+                    <div class="testimonials__header">
+                        <div class="testimonials__avatar">FM</div>
+                        <div>
+                            <h4 class="testimonials__name">Fernando M.</h4>
+                            <span class="testimonials__date">hace 1 semana</span>
+                        </div>
+                        <div class="testimonials__stars">★★★★★</div>
+                    </div>
+                    <p class="testimonials__text">"Excelente la atención por parte de Guille, un genio el mesero que nos atendió. La calidad de la comida un lujo, riquísimo todo, volveremos más seguido. Recomiendo la parrillada y el vino orgánico malbec."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== HISTORIA ===== -->
+    <section class="story" id="historia">
+        <div class="container">
+            <div class="story__grid">
+                <div class="story__content anim-reveal">
+                    <p class="section-label">Nuestra historia</p>
+                    <h2 class="section-title section-title--left">Un nombre que <em>cuenta una historia</em></h2>
+                    <div class="story__text">
+                        <p><strong>Shipibo</strong> viene del pueblo Shipibo-Conibo, una de las culturas indígenas más antiguas de la Amazonía peruana, reconocida por sus patrones geométricos ceremoniales y su profunda conexión con la naturaleza.</p>
+                        <p>Nacimos en Ramos Mejía con una convicción simple: que la comida vegana no tiene por qué ser una renuncia. Cada plato que sale de nuestra cocina es una fusión entre la sabiduría ancestral amazónica y la gastronomía contemporánea — ingredientes como la yuba, los hongos shiitake y las especias de la selva, transformados en una experiencia que no encontrás en ningún otro lado del oeste.</p>
+                        <p>El mural botánico que cubre nuestras paredes fue pintado a mano. Las luces cálidas que cuelgan del techo crean esa sensación de lugar secreto. Y cada persona que cruza la puerta no es un cliente: es alguien que está por descubrir algo que no sabía que existía.</p>
+                    </div>
+                </div>
+                <div class="story__team anim-reveal">
+                    <h3 class="story__team-title">El equipo</h3>
+                    <div class="story__member">
+                        <div class="story__member-avatar">MG</div>
+                        <div>
+                            <h4 class="story__member-name">Marcela G.</h4>
+                            <span class="story__member-role">Fundadora & Cocinera Principal</span>
+                        </div>
+                    </div>
+                    <div class="story__member">
+                        <div class="story__member-avatar">GS</div>
+                        <div>
+                            <h4 class="story__member-name">Guillermo S.</h4>
+                            <span class="story__member-role">Chef de Sala & Referente</span>
+                        </div>
+                    </div>
+                    <div class="story__member">
+                        <div class="story__member-avatar">JP</div>
+                        <div>
+                            <h4 class="story__member-name">Javier P.</h4>
+                            <span class="story__member-role">Pastelero & Postres</span>
+                        </div>
+                    </div>
+                    <div class="story__member story__member--special">
+                        <div class="story__member-avatar">🐱</div>
+                        <div>
+                            <h4 class="story__member-name">Misha</h4>
+                            <span class="story__member-role">Gata de bienvenida & Supervisora de mimos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PRESS ===== -->
+    <section class="press">
+        <div class="container">
+            <div class="press__grid">
+                <div class="press__card anim-reveal">
+                    <p class="press__quote">"El mejor lugar para vegetarianos y veganos del oeste del gran Buenos Aires. Una experiencia gastronómica que desafía lo que creías posible sin carne."</p>
+                    <span class="press__source">— Revista El palate</span>
+                </div>
+                <div class="press__card anim-reveal">
+                    <p class="press__quote">"SHIPIBO no es solo un restaurant, es un templo dedicado al sabor y al bienestar. La ambientación, los sabores y la atención lo convierten en un lugar único."</p>
+                    <span class="press__source">— Guía Gastronómica BA</span>
+                </div>
+                <div class="press__card anim-reveal">
+                    <p class="press__quote">"Una fusión perfecta entre ancestral y contemporáneo. Cada plato cuenta una historia, y cada visita te deja con ganas de volver."</p>
+                    <span class="press__source">— Buenos Aires Vegano</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACTO ===== -->
+    <section class="contact" id="contacto">
+        <div class="container">
+            <div class="contact__grid">
+                <div class="contact__info anim-reveal">
+                    <p class="section-label">Reservá tu mesa</p>
+                    <h2 class="section-title section-title--left">Vení a descubrir <em>la selva</em></h2>
+                    <p class="contact__desc">Reservá por WhatsApp y asegurá tu lugar. También podés acercarte sin reserva — siempre hay una mesa esperando.</p>
+                    <div class="contact__details">
+                        <div class="contact__detail">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            <div>
+                                <strong>Suipacha 427</strong>
+                                <span>B1704 Ramos Mejía, Buenos Aires</span>
+                            </div>
+                        </div>
+                        <div class="contact__detail">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                            <div>
+                                <a href="tel:+5491165384415" class="contact__link">011 6538-4415</a>
+                            </div>
+                        </div>
+                        <div class="contact__detail">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+                            <div>
+                                <strong>Horarios</strong>
+                                <span>Lun 11:00 – 0:30 · Mar a Dom 11:30 – 1:00</span>
+                            </div>
+                        </div>
+                        <div class="contact__detail">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                            <div>
+                                <a href="https://www.instagram.com/shipibobsas/" class="contact__link" target="_blank" rel="noopener">@shipibobsas</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact__form-wrapper anim-reveal">
+                    <form class="contact__form" id="reservaForm">
+                        <h3 class="contact__form-title">Hacé tu reserva</h3>
+                        <div class="form__group">
+                            <label for="reservaName" class="form__label">Nombre</label>
+                            <input type="text" id="reservaName" name="nombre" class="form__input" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="form__row">
+                            <div class="form__group">
+                                <label for="reservaDate" class="form__label">Fecha</label>
+                                <input type="date" id="reservaDate" name="fecha" class="form__input" required>
+                            </div>
+                            <div class="form__group">
+                                <label for="reservaGuests" class="form__label">Personas</label>
+                                <select id="reservaGuests" name="personas" class="form__input" required>
+                                    <option value="" disabled selected>Cantidad</option>
+                                    <option value="1">1 persona</option>
+                                    <option value="2">2 personas</option>
+                                    <option value="3">3 personas</option>
+                                    <option value="4">4 personas</option>
+                                    <option value="5">5 personas</option>
+                                    <option value="6">6 personas</option>
+                                    <option value="7+">7+ personas</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form__group">
+                            <label for="reservaTime" class="form__label">Horario preferido</label>
+                            <select id="reservaTime" name="horario" class="form__input" required>
+                                <option value="" disabled selected>Elegí un horario</option>
+                                <option value="11:00">11:00</option>
+                                <option value="12:00">12:00</option>
+                                <option value="13:00">13:00</option>
+                                <option value="14:00">14:00</option>
+                                <option value="15:00">15:00</option>
+                                <option value="20:00">20:00</option>
+                                <option value="21:00">21:00</option>
+                                <option value="22:00">22:00</option>
+                                <option value="23:00">23:00</option>
+                            </select>
+                        </div>
+                        <div class="form__group">
+                            <label for="reservaNotes" class="form__label">Algún pedido especial (opcional)</label>
+                            <textarea id="reservaNotes" name="notas" class="form__input form__textarea" placeholder="Celebración, alergias, preferencias..." rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--full">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            Reservar por WhatsApp
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="#" class="footer__logo" aria-label="SHIPIBO">
+                        <svg class="footer__snake" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M20 4C12 4 8 10 8 16C8 22 12 24 14 28C16 32 14 36 20 36C26 36 32 30 32 22C32 16 28 14 26 10C24 6 28 4 20 4Z" stroke="currentColor" stroke-width="1.2" fill="none"/>
+                            <circle cx="15" cy="12" r="1.2" fill="currentColor"/>
+                            <path d="M20 36L18 39M20 36L22 39" stroke="currentColor" stroke-width="0.8"/>
+                            <path d="M10 8C12 6 14 8 12 10" stroke="currentColor" stroke-width="0.8" fill="none"/>
+                        </svg>
+                        <span class="footer__name">SHIPIBO</span>
+                    </a>
+                    <p class="footer__tagline">Bistró Amazónico · Gastronomía vegana de autor</p>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__heading">Visitanos</h4>
+                    <p class="footer__text">Suipacha 427<br>B1704 Ramos Mejía<br>Provincia de Buenos Aires</p>
+                    <a href="tel:+5491165384415" class="footer__link">011 6538-4415</a>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__heading">Horarios</h4>
+                    <ul class="footer__list">
+                        <li>Lunes: 11:00 – 0:30</li>
+                        <li>Martes a Domingo: 11:30 – 1:00</li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__heading">Seguinos</h4>
+                    <a href="https://www.instagram.com/shipibobsas/" class="footer__social" target="_blank" rel="noopener">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
+                        Instagram
+                    </a>
+                    <a href="https://wa.me/5491165384415" class="footer__social" target="_blank" rel="noopener">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        WhatsApp
+                    </a>
+                </div>
+            </div>
+            <div class="footer__map anim-reveal">
+                <iframe
+                    src="https://maps.google.com/maps?q=Suipacha+427+Ramos+Mejia+Buenos+Aires&output=embed"
+                    width="100%"
+                    height="350"
+                    style="border:0;"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Ubicación de SHIPIBO Bistró Amazónico">
+                </iframe>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 SHIPIBO Bistró Amazónico. Todos los derechos reservados.</p>
+                <a href="https://tuweben3dias.com" class="footer__credit" target="_blank" rel="noopener">Diseñado por tuweben3dias.com</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== WHATSAPP FAB ===== -->
+    <a href="https://wa.me/5491165384415?text=Hola!%20Quiero%20hacer%20una%20reserva%20en%20SHIPIBO" class="fab-whatsapp" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp" id="fabWhatsapp">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+
+    <script src="./script.js"></script>
+</body>
+</html>
