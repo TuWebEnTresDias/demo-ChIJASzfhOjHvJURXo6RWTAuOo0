@@ -210,7 +210,7 @@
             var encodedMessage = encodeURIComponent(message);
             var whatsappURL = 'https://wa.me/5491165384415?text=' + encodedMessage;
 
-            window.open(whatsappURL, '_blank', 'noopener');
+            window.open(whatsappURL, '_blank', 'noopener,noreferrer');
         });
     }
 
